@@ -49,6 +49,8 @@ def bfs(visited, graph, node): #function for BFS
         queue.append(neighbour)
 
 # Driver Code
+print("Following is the Breadth-First Search")
+bfs(visited, graph, '5')    # function calling
 
 
 
@@ -280,6 +282,3 @@ int main()
 	cout <<"The optimal value is : "<< minimax(0, 0, true, values, MIN, MAX);;
 	return 0;
 }
-      
-print("Following is the Breadth-First Search")
-bfs(visited, graph, '5')    # function calling
