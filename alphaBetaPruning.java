@@ -14,6 +14,7 @@ public class alphaBetaPruning {
             for (int i = 0; i < 2; i++) {
 
                 int val = minimax(depth + 1, nodeIndex * 2 + i, false, values, alpha, beta);
+                // System.out.println("val: " + val);
                 best = Math.max(best, val);
                 alpha = Math.max(alpha, best);
 
@@ -26,6 +27,7 @@ public class alphaBetaPruning {
 
             for (int i = 0; i < 2; i++) {
                 int val = minimax(depth + 1, nodeIndex * 2 + i, true, values, alpha, beta);
+                // System.out.println("val: " + val);
                 best = Math.min(best, val);
                 beta = Math.min(beta, best);
 
