@@ -3,25 +3,25 @@ public class miniMax {
     static final int MAX = 99999;
     static final int MIN = -99999;
 
-    public static int minimax(int depth, int nodeIndex, boolean maximizingPlayer, int[] values) {
-
-        if (depth == 3)
+    public static int minimax(int depth , int nodeIndex, boolean maximizingPlayer,int [] values){
+        if(depth==3){
             return values[nodeIndex];
+        }
 
-        if (maximizingPlayer) {
-            int best = MIN;
-
-            for (int i = 0; i < 2; i++) {
-                int val = minimax(depth + 1, nodeIndex * 2 + i, false, values);
-                best = Math.max(best, val);
+        if(maximizingPlayer){
+            int best = MIN; 
+            
+            for(int i=0; i<2; i++){
+                int value = minimax(depth+1, nodeIndex*2+i, false, values);
+                best = Math.max(best, value);
             }
             return best;
-        } else {
-            int best = MAX;
-
-            for (int i = 0; i < 2; i++) {
-                int val = minimax(depth + 1, nodeIndex * 2 + i, true, values);
-                best = Math.min(best, val);
+        } else{
+            int best = MAX; 
+            
+            for(int i=0; i<2; i++){
+                int value = minimax(depth+1, nodeIndex*2+i, true, values);
+                best = Math.min(best, value);
             }
             return best;
         }
